@@ -11,12 +11,18 @@ for (let i = 0; i < students.length; i++) {
     const studentDiv = document.createElement("div");
 studentDiv.className ="student";
     studentDiv.innerHTML =`
+    <b>STUDENT INFO</b><br><br>
     <b>Name :</b> ${student.Name}<br>
     <b>Age :</b> ${student.age} <br>
     <b>Course :</b> ${student.course}
+    <button onclick="greetStudent('${student.Name}')">Greet</button>
+    <hr />
 `; 
 
 container.appendChild(studentDiv);
 
+}
+function greetStudent(name) {
+    alert (`Hello, ${name}!`);
 }
 
